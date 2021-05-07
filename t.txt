@@ -1,0 +1,22 @@
+Array
+(
+    [C] => SG
+    [ST] => Singapore
+    [L] => Signapore
+    [O] => Apex Software
+    [OU] => Certificate Authority
+    [CN] => ca@code.apexpl.io
+    [emailAddress] => mdizak@apexpl.io
+    [keyUsage] => DigitalSignature
+)
+Array
+(
+    [C] => CA
+    [ST] => British Columbia
+    [L] => Vancouver
+    [O] => Apex Software
+    [OU] => Signing Room
+    [CN] => repo@code.apexpl.io
+    [emailAddress] => mdizak@apexpl.io
+    [keyUsage] => DigitalSignature
+)

@@ -1,0 +1,29 @@
+{
+    "name": "apex/armor-x509", 
+    "description": "x509 extension for Armor", 
+    "type": "package",
+    "authors": [
+        {
+            "name": "Matt Dizak", 
+            "email": "mdizak@apexpl.io"
+        }
+    ],
+    "support": {
+        "support": "https://reddit.com/r/apexpl",
+        "source": "https://github.com/apexpl/armor-x509"
+    }, 
+    "homepage": "https://apexpl.io",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0.0",
+        "apex/armor": "~0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }, 
+    "autoload": {
+        "psr-4": { 
+            "Apex\\Armor\\x509\\": "src/"
+        }
+    }
+}
