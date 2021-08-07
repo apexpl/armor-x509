@@ -30,7 +30,7 @@ class KeyManager extends KeyUtils
     public function generate(
         string $uuid, 
         DistinguishedName $dn, 
-        string $password, 
+        ?string $password = null, 
         bool $self_sign = false, 
         bool $save_privkey = false
     ):array { 
@@ -61,6 +61,7 @@ class KeyManager extends KeyUtils
             'is_pending_sign' => $is_pending_sign, 
             'uuid' => $uuid, 
             'algo' => 'x509', 
+            'fingerprint' => openssl_x509_fingerprint($crt, 'sha384'), 
             'public_key' => $public_key, 
             'private_key' => $private_key, 
             'certificate' => $crt
@@ -151,7 +152,7 @@ class KeyManager extends KeyUtils
     /** 
      * Open private key
      */
-    public function openPrivKey(string $private_key, string $password):\OpenSSLAsymmetricKey
+    public function openPrivKey(string $private_key, ?string $password = null):\OpenSSLAsymmetricKey
     {
 
         if (!$privkey = openssl_pkey_get_private($private_key, $password)) { 

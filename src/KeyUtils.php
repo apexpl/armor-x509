@@ -24,13 +24,13 @@ class KeyUtils
     /**
      * Generate new private key and CSR
      */
-    public function genCSR(DistinguishedName $dn, string $password, bool $self_sign = false):array
+    public function genCSR(DistinguishedName $dn, string $password, bool $self_sign = false, int $bits = 4096):array
     {
 
         // Generate key
         $privkey = openssl_pkey_new([
-            "digest_alg" => "sha512",
-            "private_key_bits" => 4096,
+            "digest_alg" => "sha384",
+            "private_key_bits" => $bits,
             "private_key_type" => OPENSSL_KEYTYPE_RSA
         ]);
 
